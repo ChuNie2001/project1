@@ -19,14 +19,29 @@ tidy=TRUE, tidy.opts=list(width.cutoff=60), R.options=list(max.print=100))
 
 ## Data Wrangling, Exploration, Visualization
 
-### Name and EID here
+### Chu Nie cn9863
 
 #### Introduction 
 
-Paragraph or two introducing your datasets and variables, why they are interesting to you, etc.
+The EQAO administers standardized tests in mathematics to all Grade 9 students of Ontario.This dataset contains a small collection of schools from the Toronto, Waterloo and Peel district school boards for the year 2013-2014. In the school_data, it contains variables Level1-4(level 3 represents the provincial standard while level 4 exceeds the standard). The school data also contains school name and id, board name and board id. In response_data, the Q1-11 are the questions related to mathematics and the data are the percentage of students who gave out positive answers. The response data also contains a school id variable. By analyzing the datasets, I hope I can learn about the relationship between the student's ability on math and the level of the students and also which area has the best overall student performance.
+
+Q1: I like mathematics
+Q2: I am good at mathematics
+Q3: I am able to answer difficult mathematics questions
+Q4: Mathematics is one of my favourite subjects
+Q5: I understand most of the mathematics I am taught
+Q6: Mathematics is an easy subject
+Q7: I do my best in mathematics class
+Q8: The mathematics I learn now is useful for everyday life
+Q9: The mathematics I learn now helps me do work in other subjects
+Q10: I need to do well in mathematics to study what I want later
+Q11: I need to keep taking mathematics for the kind of job I want after I leave school
 
 ```{R}
 # read your datasets in here, e.g., with read_csv()
+library(readr)
+response <- read_csv("response_data.csv")
+school <- read_csv("school_data.csv")
 
 ```
 
@@ -36,6 +51,13 @@ If your datasets are tidy already, demonstrate that you can reshape data with pi
 
 ```{R}
 # your tidying code (if applicable; can also wait until wrangling section)
+library(tidyverse)
+library(dplyr)
+
+response %>% pivot_longer(col =-1 , names_to = "Question", values_to = "agree_perc") -> r1
+
+school %>% rename("school_id" = "School ID")%>% rename("board_id"="Board ID")%>%rename("level_4_per" = "Level 4 (%)","level_2_per" = "Level 2 (%)","level_1_per" = "Level 1 (%)","level_3_per" = "Level 3 (%)") ->s1
+r1 %>% rename("school_id" = "School ID") ->r1
 ```
 
     
@@ -43,48 +65,90 @@ If your datasets are tidy already, demonstrate that you can reshape data with pi
 
 ```{R}
 # your joining code
-
-# your joining code
+s1 %>% full_join(r1,by = "school_id") -> complete_data
+complete_data
+s1%>% summarize(row = n(), distinct = n_distinct(.))
+r1 %>% summarize(row = n(), distinct = n_distinct(.))
+complete_data %>% summarize(row = n(),distinct = n_distinct(.))
 ```
 
-Discussions of joining here. Feel encouraged to break up into more than once code chunk and discuss each in turn.
+s1 is the tidy version of the school data and r1 is the tidy version of the response data. Joinning these two datasets by "school_id" which is the variable in common. The s1 has the "Board" and the "board_id" which r1 doesn't. And r1 has the percentage of "agree" or "strongly" agree of the response of the questions in the questionnaire. By joinning these two datasets, we can know the response percentage of the specific school with school name, board name, board id and percentage of levels. The original size of school data is 86 rows and 12 columns. The original size of the response data is 86 rows and 12 variables. After reshaping, the r1 has 946 rows and 3 columns. The s1 has 86 distinct rows. The r1 has 946 distinct row. The complete_data, which is the datasets after joinning r1 and s1, has 946 distinct rows and 14 columns. There is no rows or columns being dropped. These datasets have no "NA".
 
 ####  Wrangling
 
 ```{R}
-# your wrangling code
+library(gt)
 
-# your wrangling code
+# create two new columns called standard_or_above_per and below_standard_per. "standard_or_above_per" represents the percentage of students who are level3 or level 4. "below_standard_per" represents the percentage of students who are level1 or level2.
+complete_data %>% mutate(standard_or_above_per = (level_3_per+level_4_per)) %>% mutate(below_standard_per = (level_2_per+level_1_per))%>%
+  mutate(female_per = (`Num F`/(`Num F`+`Num M`))) %>% mutate(male_per = (`Num M`/(`Num F`+`Num M`))) -> complete_data
 
-# your wrangling code
+complete_data$Board <- str_replace(complete_data$Board,"District School Board","DSB")
+
+# average number of students in each board
+complete_data %>%group_by(Board,board_id)%>%summarize(mean(`Num students`),sd(`Num students`),var(`Num students`),min(`Num students`),max(`Num students`)) %>% gt %>% tab_header(title=md("**Summary Statistics**"),subtitle = md("About number of students in each board")) 
+
+# average of level3 and level4 students percentage in 3 different boards
+complete_data %>% group_by(Board,board_id) %>% summarize("avg_standardOrAbove_per" = mean(standard_or_above_per),sd(standard_or_above_per),var(`Num students`),min(standard_or_above_per),max(standard_or_above_per))%>%gt %>% tab_header(title=md("**Summary Statistics**"),subtitle = md("About Level3 and Level4 students percentage in boards")) 
+
+complete_data %>% summarize("avg_standardOrAbove_per" = mean(standard_or_above_per),sd(standard_or_above_per),var(`Num students`),min(standard_or_above_per),max(standard_or_above_per))
+
+# average of level1 and level2 students percentage in 3 different boards
+complete_data %>% group_by(Board,board_id) %>% summarize("avg_below_standard_per" = mean(below_standard_per),sd(below_standard_per),var(`Num students`),min(below_standard_per),max(below_standard_per))%>%gt %>% tab_header(title=md("**Summary Statistics**"),subtitle = md("About Level1 and Level2 students percentage in boards")) 
+
+complete_data %>% summarize("avg_below_standard_per" = mean(below_standard_per),sd(below_standard_per),var(`Num students`),min(below_standard_per),max(below_standard_per))
+
+# The average number of students in all three boards
+complete_data %>% summarize(avg_num_all = mean(`Num students`),sd(`Num students`),var(`Num students`),min(`Num students`),max(`Num students`))%>%gt %>% tab_header(title=md("**Summary Statistics**"),subtitle = md("About number of students stat in percentage")) 
+
+# The mean percentage of female percentage and male percentage in 3 boards
+complete_data %>% group_by(Board,board_id) %>% summarize(mean(female_per),mean(male_per),sd(female_per),sd(male_per),var(female_per),var(male_per))%>%gt %>% tab_header(title=md("**Summary Statistics**"),subtitle = md("About female student percentage and male students percentage in 3 boards")) 
+
+
+complete_data %>% select(c(School,Board,board_id,Question,agree_perc,standard_or_above_per))%>% filter(Question == "Q2(%)")%>% group_by(Board) %>% summarize(mean(agree_perc),sd(agree_perc),var(agree_perc),min(agree_perc),max(agree_perc))%>%gt %>% tab_header(title=md("**Summary Statistics**"),subtitle = md("About student who believe they are good at math in percentage")) 
+
+
+
+
 ```
 
-Your discussion of wrangling section here. Feel encouraged to break up into more than once code chunk and discuss each in turn.
+I created two new columns called standard_or_above_per and below_standard_per. "standard_or_above_per" represents the percentage of students who are level3 or level 4. "below_standard_per" represents the percentage of students who are level1 or level2. The Peel DSB has the highest average number of students but lowest average percentage of female students. The Peel DSB also has the highest average standard_or_above_per among three boards. The minimum standard_or_above_per of the Peel DSB are the highest among the three and also a high maximum. The Waterloo DSB has the fewest average number of students but the biggest minimum number of students and smallest standard deviation value, thus the Waterloo DSB has the most compact distribution of number of students. The Waterloo DSB has the highest agree_perc of Q2(Q2:I am good at mathematics. The agree_perc is the percentage of students responded as agree or strongly agree.) but the lowest and below than overall average standard_or_above_per. The students in Toronto DSB has a wide range of performance. It has the smallest minimum standard_or_above_per among the three boards, but the highest standard_or_above_per and the largest standard deviation among the three. The Toronto DSB also has the higest average below_standard_per(level1 and level2) among the three.
+
+In Toronto DSB, the students performance are more diverse. The Peel DSB has the best overall student performance among three areas. In Waterloo DSB, the students has the best confidence in math. 
 
 
 #### Visualizing
 
 ```{R}
 # your plot 1
-```
+complete_data %>% pivot_longer(col=c(6,7,8,9),names_to = "Level",values_to = "Percentage") -> t1 
+t1 %>% ggplot(aes(x = Level,y = Percentage,fill=Level))+ geom_bar(stat = "summary",fun = mean,show.legend = T) + ylab("Average Percentage of Students in Each Level") + scale_y_continuous(breaks = seq(0,100,20))+ geom_errorbar(stat = "summary" ,width =0.6)+ scale_fill_brewer()
 
-Your discussion of plot 1
+```
+From this plot, we could see that the majority of the students are in Level3, which is standard level. Level1 is the most rare. Level2 and Level4 are about the same. Thus, the majority of the grade 9 students from these three areas are standard level students.
+
 
 ```{R}
 # your plot 2
-```
+complete_data %>% select(c(School,Board,board_id,Question,agree_perc,standard_or_above_per))%>% filter(Question == "Q2(%)") -> t3
+ggplot(t3,aes(x = Board, y= agree_perc,fill = "red"))+ geom_boxplot(show.legend = F)+scale_y_continuous(breaks = seq(0,100,5))
 
-Your discussion of plot 2
+```
+In the questionnaire, Q2:I am good at mathematics. The agree_perc is the percentage of students responded as agree or strongly agree. The plot above give us an approximate distribution of the agree_perc of the question2 in three boards. The Toronto DSB has the lowest median. The Waterloo Region DSB has the highest median while Waterloo Region DSB has the lowest average standard_or_above_percentage. The Toronto has an outlier that is higher. The Waterloo has a lower outlier. The Waterloo DSB has the most compact distribution on Q2 agree_perc. The Toronto DSB has the most disperse distribution on Q2 agree_perc.
+
+
 
 ```{R}
 # your plot 3
+complete_data %>% select(c(School,Board,board_id,Question,agree_perc,standard_or_above_per))%>% filter(Question == "Q2(%)") -> t2
+ggplot(t2,aes(x = standard_or_above_per,y=`agree_perc`))+geom_point(aes(color = Board)) +geom_smooth(method="lm")+scale_y_continuous(breaks = seq(0,100,5))+scale_x_continuous(breaks = seq(0,100,10)) + ggtitle("Percentage of High Achieving Level VS. Percentage of High Confident in Math ")
+
 ```
 
-Your discussion of plot 3
+In the questionnaire, Q2:I am good at mathematics. The agree_perc is the percentage of students responded as agree or strongly agree. Standard_or above_per is the percentage of students who achieve at least level 3. From the plot, we can tell as the standard_or_above_per increases, the agree_perc also increases. That means, the students with higher mathematical performance will be more likely to achieve level 3 or above.The standard_or_above_per and agree_perc(Q2) are positively related.
 
 #### Concluding Remarks
-
-If any!
+Overall, the Peel DSB is the DSB that has the best general student performance. The students with higher mathematical performance will be more likely to achieve level 3 or above.
 
 
 
