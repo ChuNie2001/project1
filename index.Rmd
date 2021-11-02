@@ -59,7 +59,7 @@ response %>% pivot_longer(col =-1 , names_to = "Question", values_to = "agree_pe
 school %>% rename("school_id" = "School ID")%>% rename("board_id"="Board ID")%>%rename("level_4_per" = "Level 4 (%)","level_2_per" = "Level 2 (%)","level_1_per" = "Level 1 (%)","level_3_per" = "Level 3 (%)") ->s1
 r1 %>% rename("school_id" = "School ID") ->r1
 ```
-
+Use pivot longer to put all the Question name and Question values into two columns, rename the school id column, and save it as r1 for later use. Rename the school data's variable name and save it as s1 for later use.
     
 #### Joining/Merging
 

@@ -1559,6 +1559,7 @@ s1 &lt;- school %&gt;% rename(school_id = &quot;School ID&quot;) %&gt;% rename(b
     rename(level_4_per = &quot;Level 4 (%)&quot;, level_2_per = &quot;Level 2 (%)&quot;, 
         level_1_per = &quot;Level 1 (%)&quot;, level_3_per = &quot;Level 3 (%)&quot;)
 r1 &lt;- r1 %&gt;% rename(school_id = &quot;School ID&quot;)</code></pre>
+<p>Use pivot longer to put all the Question name and Question values into two columns, rename the school id column, and save it as r1 for later use. Rename the school data’s variable name and save it as s1 for later use.</p>
 </div>
 <div id="joiningmerging" class="section level4">
 <h4>Joining/Merging</h4>
@@ -1624,7 +1625,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(`Num studen
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#adsszreakc .gt_table {
+#lqthcjcvyt .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1649,7 +1650,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(`Num studen
   border-left-color: #D3D3D3;
 }
 
-#adsszreakc .gt_heading {
+#lqthcjcvyt .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1661,7 +1662,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(`Num studen
   border-right-color: #D3D3D3;
 }
 
-#adsszreakc .gt_title {
+#lqthcjcvyt .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1671,7 +1672,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(`Num studen
   border-bottom-width: 0;
 }
 
-#adsszreakc .gt_subtitle {
+#lqthcjcvyt .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1681,13 +1682,13 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(`Num studen
   border-top-width: 0;
 }
 
-#adsszreakc .gt_bottom_border {
+#lqthcjcvyt .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#adsszreakc .gt_col_headings {
+#lqthcjcvyt .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1702,7 +1703,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(`Num studen
   border-right-color: #D3D3D3;
 }
 
-#adsszreakc .gt_col_heading {
+#lqthcjcvyt .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1722,7 +1723,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(`Num studen
   overflow-x: hidden;
 }
 
-#adsszreakc .gt_column_spanner_outer {
+#lqthcjcvyt .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1734,15 +1735,15 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(`Num studen
   padding-right: 4px;
 }
 
-#adsszreakc .gt_column_spanner_outer:first-child {
+#lqthcjcvyt .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#adsszreakc .gt_column_spanner_outer:last-child {
+#lqthcjcvyt .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#adsszreakc .gt_column_spanner {
+#lqthcjcvyt .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1754,7 +1755,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(`Num studen
   width: 100%;
 }
 
-#adsszreakc .gt_group_heading {
+#lqthcjcvyt .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1776,7 +1777,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(`Num studen
   vertical-align: middle;
 }
 
-#adsszreakc .gt_empty_group_heading {
+#lqthcjcvyt .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1791,15 +1792,15 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(`Num studen
   vertical-align: middle;
 }
 
-#adsszreakc .gt_from_md > :first-child {
+#lqthcjcvyt .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#adsszreakc .gt_from_md > :last-child {
+#lqthcjcvyt .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#adsszreakc .gt_row {
+#lqthcjcvyt .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1818,7 +1819,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(`Num studen
   overflow-x: hidden;
 }
 
-#adsszreakc .gt_stub {
+#lqthcjcvyt .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1830,7 +1831,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(`Num studen
   padding-left: 12px;
 }
 
-#adsszreakc .gt_summary_row {
+#lqthcjcvyt .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1840,7 +1841,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(`Num studen
   padding-right: 5px;
 }
 
-#adsszreakc .gt_first_summary_row {
+#lqthcjcvyt .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1850,7 +1851,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(`Num studen
   border-top-color: #D3D3D3;
 }
 
-#adsszreakc .gt_grand_summary_row {
+#lqthcjcvyt .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1860,7 +1861,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(`Num studen
   padding-right: 5px;
 }
 
-#adsszreakc .gt_first_grand_summary_row {
+#lqthcjcvyt .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1870,11 +1871,11 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(`Num studen
   border-top-color: #D3D3D3;
 }
 
-#adsszreakc .gt_striped {
+#lqthcjcvyt .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#adsszreakc .gt_table_body {
+#lqthcjcvyt .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1883,7 +1884,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(`Num studen
   border-bottom-color: #D3D3D3;
 }
 
-#adsszreakc .gt_footnotes {
+#lqthcjcvyt .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1897,13 +1898,13 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(`Num studen
   border-right-color: #D3D3D3;
 }
 
-#adsszreakc .gt_footnote {
+#lqthcjcvyt .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#adsszreakc .gt_sourcenotes {
+#lqthcjcvyt .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1917,46 +1918,46 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(`Num studen
   border-right-color: #D3D3D3;
 }
 
-#adsszreakc .gt_sourcenote {
+#lqthcjcvyt .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#adsszreakc .gt_left {
+#lqthcjcvyt .gt_left {
   text-align: left;
 }
 
-#adsszreakc .gt_center {
+#lqthcjcvyt .gt_center {
   text-align: center;
 }
 
-#adsszreakc .gt_right {
+#lqthcjcvyt .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#adsszreakc .gt_font_normal {
+#lqthcjcvyt .gt_font_normal {
   font-weight: normal;
 }
 
-#adsszreakc .gt_font_bold {
+#lqthcjcvyt .gt_font_bold {
   font-weight: bold;
 }
 
-#adsszreakc .gt_font_italic {
+#lqthcjcvyt .gt_font_italic {
   font-style: italic;
 }
 
-#adsszreakc .gt_super {
+#lqthcjcvyt .gt_super {
   font-size: 65%;
 }
 
-#adsszreakc .gt_footnote_marks {
+#lqthcjcvyt .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="adsszreakc" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="lqthcjcvyt" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="6" class="gt_heading gt_title gt_font_normal" style><strong>Summary Statistics</strong></th>
@@ -2023,7 +2024,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_standardOrAb
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#vxoodzhhnd .gt_table {
+#gemphdotnh .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -2048,7 +2049,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_standardOrAb
   border-left-color: #D3D3D3;
 }
 
-#vxoodzhhnd .gt_heading {
+#gemphdotnh .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2060,7 +2061,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_standardOrAb
   border-right-color: #D3D3D3;
 }
 
-#vxoodzhhnd .gt_title {
+#gemphdotnh .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2070,7 +2071,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_standardOrAb
   border-bottom-width: 0;
 }
 
-#vxoodzhhnd .gt_subtitle {
+#gemphdotnh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2080,13 +2081,13 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_standardOrAb
   border-top-width: 0;
 }
 
-#vxoodzhhnd .gt_bottom_border {
+#gemphdotnh .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vxoodzhhnd .gt_col_headings {
+#gemphdotnh .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2101,7 +2102,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_standardOrAb
   border-right-color: #D3D3D3;
 }
 
-#vxoodzhhnd .gt_col_heading {
+#gemphdotnh .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2121,7 +2122,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_standardOrAb
   overflow-x: hidden;
 }
 
-#vxoodzhhnd .gt_column_spanner_outer {
+#gemphdotnh .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2133,15 +2134,15 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_standardOrAb
   padding-right: 4px;
 }
 
-#vxoodzhhnd .gt_column_spanner_outer:first-child {
+#gemphdotnh .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vxoodzhhnd .gt_column_spanner_outer:last-child {
+#gemphdotnh .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vxoodzhhnd .gt_column_spanner {
+#gemphdotnh .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2153,7 +2154,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_standardOrAb
   width: 100%;
 }
 
-#vxoodzhhnd .gt_group_heading {
+#gemphdotnh .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2175,7 +2176,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_standardOrAb
   vertical-align: middle;
 }
 
-#vxoodzhhnd .gt_empty_group_heading {
+#gemphdotnh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2190,15 +2191,15 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_standardOrAb
   vertical-align: middle;
 }
 
-#vxoodzhhnd .gt_from_md > :first-child {
+#gemphdotnh .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vxoodzhhnd .gt_from_md > :last-child {
+#gemphdotnh .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vxoodzhhnd .gt_row {
+#gemphdotnh .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2217,7 +2218,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_standardOrAb
   overflow-x: hidden;
 }
 
-#vxoodzhhnd .gt_stub {
+#gemphdotnh .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2229,7 +2230,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_standardOrAb
   padding-left: 12px;
 }
 
-#vxoodzhhnd .gt_summary_row {
+#gemphdotnh .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2239,7 +2240,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_standardOrAb
   padding-right: 5px;
 }
 
-#vxoodzhhnd .gt_first_summary_row {
+#gemphdotnh .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2249,7 +2250,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_standardOrAb
   border-top-color: #D3D3D3;
 }
 
-#vxoodzhhnd .gt_grand_summary_row {
+#gemphdotnh .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2259,7 +2260,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_standardOrAb
   padding-right: 5px;
 }
 
-#vxoodzhhnd .gt_first_grand_summary_row {
+#gemphdotnh .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2269,11 +2270,11 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_standardOrAb
   border-top-color: #D3D3D3;
 }
 
-#vxoodzhhnd .gt_striped {
+#gemphdotnh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vxoodzhhnd .gt_table_body {
+#gemphdotnh .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2282,7 +2283,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_standardOrAb
   border-bottom-color: #D3D3D3;
 }
 
-#vxoodzhhnd .gt_footnotes {
+#gemphdotnh .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2296,13 +2297,13 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_standardOrAb
   border-right-color: #D3D3D3;
 }
 
-#vxoodzhhnd .gt_footnote {
+#gemphdotnh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#vxoodzhhnd .gt_sourcenotes {
+#gemphdotnh .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2316,46 +2317,46 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_standardOrAb
   border-right-color: #D3D3D3;
 }
 
-#vxoodzhhnd .gt_sourcenote {
+#gemphdotnh .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#vxoodzhhnd .gt_left {
+#gemphdotnh .gt_left {
   text-align: left;
 }
 
-#vxoodzhhnd .gt_center {
+#gemphdotnh .gt_center {
   text-align: center;
 }
 
-#vxoodzhhnd .gt_right {
+#gemphdotnh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vxoodzhhnd .gt_font_normal {
+#gemphdotnh .gt_font_normal {
   font-weight: normal;
 }
 
-#vxoodzhhnd .gt_font_bold {
+#gemphdotnh .gt_font_bold {
   font-weight: bold;
 }
 
-#vxoodzhhnd .gt_font_italic {
+#gemphdotnh .gt_font_italic {
   font-style: italic;
 }
 
-#vxoodzhhnd .gt_super {
+#gemphdotnh .gt_super {
   font-size: 65%;
 }
 
-#vxoodzhhnd .gt_footnote_marks {
+#gemphdotnh .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="vxoodzhhnd" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="gemphdotnh" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="6" class="gt_heading gt_title gt_font_normal" style><strong>Summary Statistics</strong></th>
@@ -2430,7 +2431,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_below_standa
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#tfrdurpdpb .gt_table {
+#znnvkiczjz .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -2455,7 +2456,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_below_standa
   border-left-color: #D3D3D3;
 }
 
-#tfrdurpdpb .gt_heading {
+#znnvkiczjz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2467,7 +2468,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_below_standa
   border-right-color: #D3D3D3;
 }
 
-#tfrdurpdpb .gt_title {
+#znnvkiczjz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2477,7 +2478,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_below_standa
   border-bottom-width: 0;
 }
 
-#tfrdurpdpb .gt_subtitle {
+#znnvkiczjz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2487,13 +2488,13 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_below_standa
   border-top-width: 0;
 }
 
-#tfrdurpdpb .gt_bottom_border {
+#znnvkiczjz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#tfrdurpdpb .gt_col_headings {
+#znnvkiczjz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2508,7 +2509,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_below_standa
   border-right-color: #D3D3D3;
 }
 
-#tfrdurpdpb .gt_col_heading {
+#znnvkiczjz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2528,7 +2529,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_below_standa
   overflow-x: hidden;
 }
 
-#tfrdurpdpb .gt_column_spanner_outer {
+#znnvkiczjz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2540,15 +2541,15 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_below_standa
   padding-right: 4px;
 }
 
-#tfrdurpdpb .gt_column_spanner_outer:first-child {
+#znnvkiczjz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#tfrdurpdpb .gt_column_spanner_outer:last-child {
+#znnvkiczjz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#tfrdurpdpb .gt_column_spanner {
+#znnvkiczjz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2560,7 +2561,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_below_standa
   width: 100%;
 }
 
-#tfrdurpdpb .gt_group_heading {
+#znnvkiczjz .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2582,7 +2583,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_below_standa
   vertical-align: middle;
 }
 
-#tfrdurpdpb .gt_empty_group_heading {
+#znnvkiczjz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2597,15 +2598,15 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_below_standa
   vertical-align: middle;
 }
 
-#tfrdurpdpb .gt_from_md > :first-child {
+#znnvkiczjz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#tfrdurpdpb .gt_from_md > :last-child {
+#znnvkiczjz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#tfrdurpdpb .gt_row {
+#znnvkiczjz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2624,7 +2625,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_below_standa
   overflow-x: hidden;
 }
 
-#tfrdurpdpb .gt_stub {
+#znnvkiczjz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2636,7 +2637,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_below_standa
   padding-left: 12px;
 }
 
-#tfrdurpdpb .gt_summary_row {
+#znnvkiczjz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2646,7 +2647,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_below_standa
   padding-right: 5px;
 }
 
-#tfrdurpdpb .gt_first_summary_row {
+#znnvkiczjz .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2656,7 +2657,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_below_standa
   border-top-color: #D3D3D3;
 }
 
-#tfrdurpdpb .gt_grand_summary_row {
+#znnvkiczjz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2666,7 +2667,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_below_standa
   padding-right: 5px;
 }
 
-#tfrdurpdpb .gt_first_grand_summary_row {
+#znnvkiczjz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2676,11 +2677,11 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_below_standa
   border-top-color: #D3D3D3;
 }
 
-#tfrdurpdpb .gt_striped {
+#znnvkiczjz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#tfrdurpdpb .gt_table_body {
+#znnvkiczjz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2689,7 +2690,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_below_standa
   border-bottom-color: #D3D3D3;
 }
 
-#tfrdurpdpb .gt_footnotes {
+#znnvkiczjz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2703,13 +2704,13 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_below_standa
   border-right-color: #D3D3D3;
 }
 
-#tfrdurpdpb .gt_footnote {
+#znnvkiczjz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#tfrdurpdpb .gt_sourcenotes {
+#znnvkiczjz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2723,46 +2724,46 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(avg_below_standa
   border-right-color: #D3D3D3;
 }
 
-#tfrdurpdpb .gt_sourcenote {
+#znnvkiczjz .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#tfrdurpdpb .gt_left {
+#znnvkiczjz .gt_left {
   text-align: left;
 }
 
-#tfrdurpdpb .gt_center {
+#znnvkiczjz .gt_center {
   text-align: center;
 }
 
-#tfrdurpdpb .gt_right {
+#znnvkiczjz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#tfrdurpdpb .gt_font_normal {
+#znnvkiczjz .gt_font_normal {
   font-weight: normal;
 }
 
-#tfrdurpdpb .gt_font_bold {
+#znnvkiczjz .gt_font_bold {
   font-weight: bold;
 }
 
-#tfrdurpdpb .gt_font_italic {
+#znnvkiczjz .gt_font_italic {
   font-style: italic;
 }
 
-#tfrdurpdpb .gt_super {
+#znnvkiczjz .gt_super {
   font-size: 65%;
 }
 
-#tfrdurpdpb .gt_footnote_marks {
+#znnvkiczjz .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="tfrdurpdpb" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="znnvkiczjz" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="6" class="gt_heading gt_title gt_font_normal" style><strong>Summary Statistics</strong></th>
@@ -2836,7 +2837,7 @@ complete_data %&gt;% summarize(avg_num_all = mean(`Num students`),
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#gsdoxtqufw .gt_table {
+#mtvllylqyz .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -2861,7 +2862,7 @@ complete_data %&gt;% summarize(avg_num_all = mean(`Num students`),
   border-left-color: #D3D3D3;
 }
 
-#gsdoxtqufw .gt_heading {
+#mtvllylqyz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2873,7 +2874,7 @@ complete_data %&gt;% summarize(avg_num_all = mean(`Num students`),
   border-right-color: #D3D3D3;
 }
 
-#gsdoxtqufw .gt_title {
+#mtvllylqyz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2883,7 +2884,7 @@ complete_data %&gt;% summarize(avg_num_all = mean(`Num students`),
   border-bottom-width: 0;
 }
 
-#gsdoxtqufw .gt_subtitle {
+#mtvllylqyz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2893,13 +2894,13 @@ complete_data %&gt;% summarize(avg_num_all = mean(`Num students`),
   border-top-width: 0;
 }
 
-#gsdoxtqufw .gt_bottom_border {
+#mtvllylqyz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gsdoxtqufw .gt_col_headings {
+#mtvllylqyz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2914,7 +2915,7 @@ complete_data %&gt;% summarize(avg_num_all = mean(`Num students`),
   border-right-color: #D3D3D3;
 }
 
-#gsdoxtqufw .gt_col_heading {
+#mtvllylqyz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2934,7 +2935,7 @@ complete_data %&gt;% summarize(avg_num_all = mean(`Num students`),
   overflow-x: hidden;
 }
 
-#gsdoxtqufw .gt_column_spanner_outer {
+#mtvllylqyz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2946,15 +2947,15 @@ complete_data %&gt;% summarize(avg_num_all = mean(`Num students`),
   padding-right: 4px;
 }
 
-#gsdoxtqufw .gt_column_spanner_outer:first-child {
+#mtvllylqyz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gsdoxtqufw .gt_column_spanner_outer:last-child {
+#mtvllylqyz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gsdoxtqufw .gt_column_spanner {
+#mtvllylqyz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2966,7 +2967,7 @@ complete_data %&gt;% summarize(avg_num_all = mean(`Num students`),
   width: 100%;
 }
 
-#gsdoxtqufw .gt_group_heading {
+#mtvllylqyz .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2988,7 +2989,7 @@ complete_data %&gt;% summarize(avg_num_all = mean(`Num students`),
   vertical-align: middle;
 }
 
-#gsdoxtqufw .gt_empty_group_heading {
+#mtvllylqyz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3003,15 +3004,15 @@ complete_data %&gt;% summarize(avg_num_all = mean(`Num students`),
   vertical-align: middle;
 }
 
-#gsdoxtqufw .gt_from_md > :first-child {
+#mtvllylqyz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gsdoxtqufw .gt_from_md > :last-child {
+#mtvllylqyz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gsdoxtqufw .gt_row {
+#mtvllylqyz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3030,7 +3031,7 @@ complete_data %&gt;% summarize(avg_num_all = mean(`Num students`),
   overflow-x: hidden;
 }
 
-#gsdoxtqufw .gt_stub {
+#mtvllylqyz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3042,7 +3043,7 @@ complete_data %&gt;% summarize(avg_num_all = mean(`Num students`),
   padding-left: 12px;
 }
 
-#gsdoxtqufw .gt_summary_row {
+#mtvllylqyz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3052,7 +3053,7 @@ complete_data %&gt;% summarize(avg_num_all = mean(`Num students`),
   padding-right: 5px;
 }
 
-#gsdoxtqufw .gt_first_summary_row {
+#mtvllylqyz .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3062,7 +3063,7 @@ complete_data %&gt;% summarize(avg_num_all = mean(`Num students`),
   border-top-color: #D3D3D3;
 }
 
-#gsdoxtqufw .gt_grand_summary_row {
+#mtvllylqyz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3072,7 +3073,7 @@ complete_data %&gt;% summarize(avg_num_all = mean(`Num students`),
   padding-right: 5px;
 }
 
-#gsdoxtqufw .gt_first_grand_summary_row {
+#mtvllylqyz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3082,11 +3083,11 @@ complete_data %&gt;% summarize(avg_num_all = mean(`Num students`),
   border-top-color: #D3D3D3;
 }
 
-#gsdoxtqufw .gt_striped {
+#mtvllylqyz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gsdoxtqufw .gt_table_body {
+#mtvllylqyz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3095,7 +3096,7 @@ complete_data %&gt;% summarize(avg_num_all = mean(`Num students`),
   border-bottom-color: #D3D3D3;
 }
 
-#gsdoxtqufw .gt_footnotes {
+#mtvllylqyz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3109,13 +3110,13 @@ complete_data %&gt;% summarize(avg_num_all = mean(`Num students`),
   border-right-color: #D3D3D3;
 }
 
-#gsdoxtqufw .gt_footnote {
+#mtvllylqyz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#gsdoxtqufw .gt_sourcenotes {
+#mtvllylqyz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3129,46 +3130,46 @@ complete_data %&gt;% summarize(avg_num_all = mean(`Num students`),
   border-right-color: #D3D3D3;
 }
 
-#gsdoxtqufw .gt_sourcenote {
+#mtvllylqyz .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#gsdoxtqufw .gt_left {
+#mtvllylqyz .gt_left {
   text-align: left;
 }
 
-#gsdoxtqufw .gt_center {
+#mtvllylqyz .gt_center {
   text-align: center;
 }
 
-#gsdoxtqufw .gt_right {
+#mtvllylqyz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gsdoxtqufw .gt_font_normal {
+#mtvllylqyz .gt_font_normal {
   font-weight: normal;
 }
 
-#gsdoxtqufw .gt_font_bold {
+#mtvllylqyz .gt_font_bold {
   font-weight: bold;
 }
 
-#gsdoxtqufw .gt_font_italic {
+#mtvllylqyz .gt_font_italic {
   font-style: italic;
 }
 
-#gsdoxtqufw .gt_super {
+#mtvllylqyz .gt_super {
   font-size: 65%;
 }
 
-#gsdoxtqufw .gt_footnote_marks {
+#mtvllylqyz .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="gsdoxtqufw" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="mtvllylqyz" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="5" class="gt_heading gt_title gt_font_normal" style><strong>Summary Statistics</strong></th>
@@ -3208,7 +3209,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#kvyjsfivts .gt_table {
+#skghvbfhpb .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -3233,7 +3234,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   border-left-color: #D3D3D3;
 }
 
-#kvyjsfivts .gt_heading {
+#skghvbfhpb .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3245,7 +3246,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   border-right-color: #D3D3D3;
 }
 
-#kvyjsfivts .gt_title {
+#skghvbfhpb .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3255,7 +3256,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   border-bottom-width: 0;
 }
 
-#kvyjsfivts .gt_subtitle {
+#skghvbfhpb .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3265,13 +3266,13 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   border-top-width: 0;
 }
 
-#kvyjsfivts .gt_bottom_border {
+#skghvbfhpb .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#kvyjsfivts .gt_col_headings {
+#skghvbfhpb .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3286,7 +3287,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   border-right-color: #D3D3D3;
 }
 
-#kvyjsfivts .gt_col_heading {
+#skghvbfhpb .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3306,7 +3307,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   overflow-x: hidden;
 }
 
-#kvyjsfivts .gt_column_spanner_outer {
+#skghvbfhpb .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3318,15 +3319,15 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   padding-right: 4px;
 }
 
-#kvyjsfivts .gt_column_spanner_outer:first-child {
+#skghvbfhpb .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#kvyjsfivts .gt_column_spanner_outer:last-child {
+#skghvbfhpb .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#kvyjsfivts .gt_column_spanner {
+#skghvbfhpb .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3338,7 +3339,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   width: 100%;
 }
 
-#kvyjsfivts .gt_group_heading {
+#skghvbfhpb .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3360,7 +3361,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   vertical-align: middle;
 }
 
-#kvyjsfivts .gt_empty_group_heading {
+#skghvbfhpb .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3375,15 +3376,15 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   vertical-align: middle;
 }
 
-#kvyjsfivts .gt_from_md > :first-child {
+#skghvbfhpb .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#kvyjsfivts .gt_from_md > :last-child {
+#skghvbfhpb .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#kvyjsfivts .gt_row {
+#skghvbfhpb .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3402,7 +3403,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   overflow-x: hidden;
 }
 
-#kvyjsfivts .gt_stub {
+#skghvbfhpb .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3414,7 +3415,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   padding-left: 12px;
 }
 
-#kvyjsfivts .gt_summary_row {
+#skghvbfhpb .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3424,7 +3425,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   padding-right: 5px;
 }
 
-#kvyjsfivts .gt_first_summary_row {
+#skghvbfhpb .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3434,7 +3435,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   border-top-color: #D3D3D3;
 }
 
-#kvyjsfivts .gt_grand_summary_row {
+#skghvbfhpb .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3444,7 +3445,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   padding-right: 5px;
 }
 
-#kvyjsfivts .gt_first_grand_summary_row {
+#skghvbfhpb .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3454,11 +3455,11 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   border-top-color: #D3D3D3;
 }
 
-#kvyjsfivts .gt_striped {
+#skghvbfhpb .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#kvyjsfivts .gt_table_body {
+#skghvbfhpb .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3467,7 +3468,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   border-bottom-color: #D3D3D3;
 }
 
-#kvyjsfivts .gt_footnotes {
+#skghvbfhpb .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3481,13 +3482,13 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   border-right-color: #D3D3D3;
 }
 
-#kvyjsfivts .gt_footnote {
+#skghvbfhpb .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#kvyjsfivts .gt_sourcenotes {
+#skghvbfhpb .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3501,46 +3502,46 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   border-right-color: #D3D3D3;
 }
 
-#kvyjsfivts .gt_sourcenote {
+#skghvbfhpb .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#kvyjsfivts .gt_left {
+#skghvbfhpb .gt_left {
   text-align: left;
 }
 
-#kvyjsfivts .gt_center {
+#skghvbfhpb .gt_center {
   text-align: center;
 }
 
-#kvyjsfivts .gt_right {
+#skghvbfhpb .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#kvyjsfivts .gt_font_normal {
+#skghvbfhpb .gt_font_normal {
   font-weight: normal;
 }
 
-#kvyjsfivts .gt_font_bold {
+#skghvbfhpb .gt_font_bold {
   font-weight: bold;
 }
 
-#kvyjsfivts .gt_font_italic {
+#skghvbfhpb .gt_font_italic {
   font-style: italic;
 }
 
-#kvyjsfivts .gt_super {
+#skghvbfhpb .gt_super {
   font-size: 65%;
 }
 
-#kvyjsfivts .gt_footnote_marks {
+#skghvbfhpb .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="kvyjsfivts" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="skghvbfhpb" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="7" class="gt_heading gt_title gt_font_normal" style><strong>Summary Statistics</strong></th>
@@ -3610,7 +3611,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#wknoivffxx .gt_table {
+#zqslukxvfo .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -3635,7 +3636,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   border-left-color: #D3D3D3;
 }
 
-#wknoivffxx .gt_heading {
+#zqslukxvfo .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3647,7 +3648,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   border-right-color: #D3D3D3;
 }
 
-#wknoivffxx .gt_title {
+#zqslukxvfo .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3657,7 +3658,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   border-bottom-width: 0;
 }
 
-#wknoivffxx .gt_subtitle {
+#zqslukxvfo .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3667,13 +3668,13 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   border-top-width: 0;
 }
 
-#wknoivffxx .gt_bottom_border {
+#zqslukxvfo .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wknoivffxx .gt_col_headings {
+#zqslukxvfo .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3688,7 +3689,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   border-right-color: #D3D3D3;
 }
 
-#wknoivffxx .gt_col_heading {
+#zqslukxvfo .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3708,7 +3709,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   overflow-x: hidden;
 }
 
-#wknoivffxx .gt_column_spanner_outer {
+#zqslukxvfo .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3720,15 +3721,15 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   padding-right: 4px;
 }
 
-#wknoivffxx .gt_column_spanner_outer:first-child {
+#zqslukxvfo .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wknoivffxx .gt_column_spanner_outer:last-child {
+#zqslukxvfo .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wknoivffxx .gt_column_spanner {
+#zqslukxvfo .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3740,7 +3741,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   width: 100%;
 }
 
-#wknoivffxx .gt_group_heading {
+#zqslukxvfo .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3762,7 +3763,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   vertical-align: middle;
 }
 
-#wknoivffxx .gt_empty_group_heading {
+#zqslukxvfo .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3777,15 +3778,15 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   vertical-align: middle;
 }
 
-#wknoivffxx .gt_from_md > :first-child {
+#zqslukxvfo .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wknoivffxx .gt_from_md > :last-child {
+#zqslukxvfo .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wknoivffxx .gt_row {
+#zqslukxvfo .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3804,7 +3805,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   overflow-x: hidden;
 }
 
-#wknoivffxx .gt_stub {
+#zqslukxvfo .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3816,7 +3817,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   padding-left: 12px;
 }
 
-#wknoivffxx .gt_summary_row {
+#zqslukxvfo .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3826,7 +3827,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   padding-right: 5px;
 }
 
-#wknoivffxx .gt_first_summary_row {
+#zqslukxvfo .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3836,7 +3837,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   border-top-color: #D3D3D3;
 }
 
-#wknoivffxx .gt_grand_summary_row {
+#zqslukxvfo .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3846,7 +3847,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   padding-right: 5px;
 }
 
-#wknoivffxx .gt_first_grand_summary_row {
+#zqslukxvfo .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3856,11 +3857,11 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   border-top-color: #D3D3D3;
 }
 
-#wknoivffxx .gt_striped {
+#zqslukxvfo .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wknoivffxx .gt_table_body {
+#zqslukxvfo .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3869,7 +3870,7 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   border-bottom-color: #D3D3D3;
 }
 
-#wknoivffxx .gt_footnotes {
+#zqslukxvfo .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3883,13 +3884,13 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   border-right-color: #D3D3D3;
 }
 
-#wknoivffxx .gt_footnote {
+#zqslukxvfo .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#wknoivffxx .gt_sourcenotes {
+#zqslukxvfo .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3903,46 +3904,46 @@ complete_data %&gt;% group_by(Board, board_id) %&gt;% summarize(mean(female_per)
   border-right-color: #D3D3D3;
 }
 
-#wknoivffxx .gt_sourcenote {
+#zqslukxvfo .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#wknoivffxx .gt_left {
+#zqslukxvfo .gt_left {
   text-align: left;
 }
 
-#wknoivffxx .gt_center {
+#zqslukxvfo .gt_center {
   text-align: center;
 }
 
-#wknoivffxx .gt_right {
+#zqslukxvfo .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wknoivffxx .gt_font_normal {
+#zqslukxvfo .gt_font_normal {
   font-weight: normal;
 }
 
-#wknoivffxx .gt_font_bold {
+#zqslukxvfo .gt_font_bold {
   font-weight: bold;
 }
 
-#wknoivffxx .gt_font_italic {
+#zqslukxvfo .gt_font_italic {
   font-style: italic;
 }
 
-#wknoivffxx .gt_super {
+#zqslukxvfo .gt_super {
   font-size: 65%;
 }
 
-#wknoivffxx .gt_footnote_marks {
+#zqslukxvfo .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="wknoivffxx" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="zqslukxvfo" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="6" class="gt_heading gt_title gt_font_normal" style><strong>Summary Statistics</strong></th>
